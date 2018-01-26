@@ -4,26 +4,15 @@
       .circle
         i.icon-user
       h1= t('settings.profile')
-    form.form(action='/api/settings/profile', method='post', role='form', autocomplete='off', autovalidate='autovalidate', autosubmit='autosubmit')
-      ul.form-messages
+    .form
       .form-group
         label= t('settings.full-name')
-        input.form-control(type='text', disabled='disabled', id='fullName', name='fullName', maxlength=100, placeholder=t('settings.full-name'), value='#{user.fullName}', validate='required fullname')
+          #{user.fullName}
       .form-group
         label= t('signup.email')
-        input.form-control(type='text', disabled='disabled', name='email', maxlength=200, placeholder=t('forgot.mail.example'), value='#{user.email}', validate='required email')
-      .form-group
-        label= t('settings.locale')
-        select.form-control(id='locale', name='locale')
+        #{user.email}
       .form-group.profile-picture
         label= t('settings.profile-picture')
         .profile-picture-form
           .image-container
             img(src=user.profilePicture(), width=65)
-          .controls
-            a(href='https://gravatar.com', target='_blank')
-              = t('settings.change-at-gravatar') + ' '
-              i.icon-share-alt
-            input.form-control(type='text', name='profilePictureUrl', maxlength=200, placeholder=t('settings.paste-url-image'), value=user.profilePictureUrl, validate='url')
-      .form-group: button.btn.btn-success.btn-block.btn-lg
-        =t('settings.save')
