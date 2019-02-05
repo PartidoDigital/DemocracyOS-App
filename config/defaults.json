@@ -14,7 +14,8 @@
   "staff": [],
   "allowEmailAliases": true,
   "facebookSignin": false,
-  "auth0Signin": false,
+  "auth0Signin": true,
+  "customSignin": false,
   "publicEmails": false,
   "moderatorEnabled": false,
   "checkNodeVersion": true,
@@ -61,6 +62,9 @@
   "slack": {
     "apiErrorWebhookUri": ""
   },
+  "recaptchaSite": "",
+  "recaptchaSecret": "",
+  "blackListEmails": [],
   "client": [
     "protocol",
     "host",
@@ -88,6 +92,7 @@
     "headerFontColor",
     "facebookSignin",
     "auth0Signin",
+    "customSignin",
     "visibility",
     "usersWhitelist",
     "multiForum",
@@ -96,7 +101,8 @@
     "segmentKey",
     "spamLimit",
     "availableLocales",
-    "warnHTTP"
+    "warnHTTP",
+    "recaptchaSite"
   ],
   "socialshare": {
     "siteName": "DemocracyOS",
